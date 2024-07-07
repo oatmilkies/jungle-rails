@@ -1,6 +1,17 @@
 <h1>Signup</h1>
 
 <%= form_with(scope: :user, url: signup_path, local: true) do |form| %>
+  <% if @user.errors.any? %>
+  <div id="error_explanation" class="alert alert-danger" role="alert">
+    <p>Cannot create new account:</p>
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
   <div>
     <%= form.label :first_name %>
     <%= form.text_field :first_name %>

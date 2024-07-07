@@ -1,7 +1,6 @@
 <h1>Login</h1>
 
 <%= form_with(url: login_path, local: true) do |form| %>
-
   <% if flash[:alert] %>
     <div id="error_explanation" class="alert alert-danger" role="alert">
       <p><%= flash[:alert] %></p>

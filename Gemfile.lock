@@ -301,7 +301,7 @@ DEPENDENCIES
   rack-mini-profiler (~> 2.0)
   rails (= 6.1.5.1)
   rmagick
-  rspec-rails (~> 5.1)
+  rspec-rails
   sass-rails (>= 6)
   sdoc
   selenium-webdriver

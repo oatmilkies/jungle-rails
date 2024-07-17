@@ -17,6 +17,12 @@ class SessionsController < ApplicationController
       flash.now[:alert] = 'Invalid email or password'
       render :new
     end
+
+    if user = User.authenticate_with_credentials(params[:email], params[:password])
+      # success logic, log them in
+    else
+      redirect_to '/login'
+    end
   end
 
   def destroy
